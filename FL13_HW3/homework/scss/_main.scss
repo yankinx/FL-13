@@ -1,0 +1,292 @@
+// Write your styles here
+
+$background-clr: null !default;
+$zero-px: null !default;
+$image: null !default;
+$main-font-text: null !default;
+$header-text-code: null !default;
+$wrapped-text-code: null !default;
+$text-code: null !default;
+$logo-text: null !default;
+$btn-color: null !default;
+$section-color-text: null !default;
+$section-banner-background: null !default;
+$section-footer-color: null !default;
+$peaks:null !default;
+$color-link: null !default;
+
+@mixin btn ($width, $height){
+  width: $width;
+  height: $height;
+  background-color: $btn-color;
+  color: $background-clr;
+  border: none;
+  font-family: $main-font-text;
+  font-weight: map-get($font-type, bold);
+  font-size: 22px;
+  border-radius: 2px;
+}
+
+@mixin section-link{
+  color: $section-color-text;
+  font-family: $main-font-text;
+  font-size: 20px;
+}
+
+$font-type: (
+  bolder: 900,
+  fat: 700,
+);
+
+html, body, div, span, p, img, footer, header, nav{
+  margin: $zero-px;
+  padding: $zero-px;
+  border: $zero-px;
+  font-size: 100%;
+}
+
+body {
+  max-width: 100%;
+  background-color: $background-clr;
+  margin: $zero-px auto;
+}
+
+.header {
+  height: 900px;
+  background: $image no-repeat;
+  background-size: 100%;
+  background-position-y: -180px;
+  border-radius: 0% 0% 40% 15%/5% 45% 36% 0%;
+  &-wrap {
+    margin: 0 auto;
+    width: 84%;
+    .landing-logo {
+      align-items: center;
+      display: flex;
+      img {
+            width: 56px;
+            height: 56px;
+            margin-top: 24px;
+            margin-left: 40px;
+      }     
+      p {
+        color: #2c2f3c;
+        font-family: "Hind", sans-serif;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 28px;
+        margin-top: 29px;
+        margin-left: 17px;
+        display: flex;
+        span {
+            font-size: 13px;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+      }
+    }
+    .header_heading {
+      width:630px;
+      color: $header-text-code;
+      font-family: $main-font-text;
+      font-size: 90px;
+      font-weight: map-get($font-type, bolder);
+      position: relative;
+      letter-spacing: 0px;
+      line-height: 90px;
+      z-index: 1;
+      margin: 87px 0px 30px 37px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: -1;
+        width: 380px;
+        height: 60px;
+        background-color: $wrapped-text-code;
+      }
+    }
+    .header_text {
+      color: $header-text-code;
+      font-family: $logo-text;
+      font-size: 20px;
+      white-space: pre-line;
+      margin-left: 40px;
+      margin-top: 40px;
+      letter-spacing: 0.25px;
+      line-height: 31.5px;
+    }
+    .header_button {
+      @include btn($width:178px, $height:58px);
+      margin-top: 75px;
+      margin-left: 40px;
+      font-weight: map-get($font-type, fat);
+      color: white;
+      }
+    .login {
+      color: $color-link;
+      font-family: $logo-text;
+      font-size: 24px;
+      margin-left: 186px;
+    }
+  }
+}
+.section_text {
+  color: $header-text-code;
+  font-family: $main-font-text;
+  font-weight: 600;
+  font-size: 56px;
+  position: relative;
+  margin-top: 44px;
+  margin-left: 697px;
+  letter-spacing: -1.65px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 698px;
+    bottom: 10px;
+    z-index: -1;
+    width: 235px;
+    height: 63px;
+    background-color: $wrapped-text-code;
+  }
+}
+.section_card {
+  display: flex;
+  width: 1125px;
+  height: 343px;
+  background-color: $text-code;
+  border-radius: 10px;
+  margin-left: 397px;
+  margin-top: 38px;
+  .section_card_img {
+    height: 295px;
+    margin: 25px;
+    border-radius: 5px;
+  }
+  .section_card_right_container {
+    width: 550px;
+    color: $background-clr;
+    text-align: center;
+    .section_card_heading {
+      margin: 58px 0 31px 9px;
+      font-family: $main-font-text;
+      font-weight: map-get($font-type, fat);
+      font-size: 29px;
+      color: $color-link;
+    }
+    .section_card_text {
+      font-family: $main-font-text;
+      color: $section-color-text;
+      text-align: justify;
+      font-size: 21px;
+      margin-bottom: 27px;
+      margin-left: 31px;
+    }
+    .section_link {
+      @include section-link;
+    }
+  }
+}
+.section_banner {
+  width: 64%;
+  height: 176px;
+  background: $section-banner-background;
+  align-items: center;
+  margin: 175px auto -90px ;
+  border-radius: 5px;
+  z-index: -2;
+  display: flex;
+    .section_banner_text_wrap {
+    width: 50%;
+    padding: 0px 136px;
+    font-family: $main-font-text;
+    z-index: 3;
+    .section_banner_heading {
+      margin-bottom: 26px;
+      color: $header-text-code;
+      position: relative;
+      font-size: 38px;
+      font-weight: map-get($font-type, fat);
+      font-family: $main-font-text;
+      &::after {
+        @extend .section_text::after;
+        position: absolute;
+        color: $wrapped-text-code;
+        left: 152px;
+        bottom: 4px;
+        z-index:-2;
+        width: 83px;
+        height: 47px;
+      }
+    }
+    .section_banner_text {
+      color: $section-color-text;
+      font-size: 21px;
+      font-weight: 400;
+      font-family: $main-font-text;
+    }
+  }
+  .section_banner_button {
+    @include btn($width: 175px, $height: 60px);
+    margin-left: 31px;
+    font-weight: map-get($font-type, fat);
+    color: white;
+  }
+}
+.footer {
+  height: 305px;
+  background-color: $text-code;
+  position: relative;
+  align-items: center;
+  z-index: -2;
+  display: flex;
+}
+.footer-wrap {
+  width: 100%;
+  font-family: $main-font-text;
+  justify-content: space-around;
+  color: $section-footer-color;
+  margin-top: 50px;
+  display: flex;
+}
+.footer_text {
+  font-size: 12px;
+  width: 250px;
+  margin-left: 125px;
+}
+.footer-cr {
+  align-items: center;
+  font-size: 15px;
+  margin-left: 70px;
+  display: flex;
+}
+.footer_logo {
+  align-items: center;
+  display: flex;
+  img {
+      height: 35px;
+      width: 35px;
+      margin-top: 10px;
+  }        
+  p { 
+    width: 80px;
+    color: $peaks;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: map-get($font-type, fat);
+    font-size: 18px;
+    font-family: $logo-text;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 20px;
+    display: flex;
+    span {
+      font-size: 9px;
+    }
+  }
+}
