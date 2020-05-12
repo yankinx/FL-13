@@ -1,0 +1,33 @@
+/* TODO: your styles goes here*/
+li {
+    list-style: none;
+}
+
+.file i {
+    color: #c7c7c7;
+}
+i {
+    color: #fbd700;
+}
+
+.empty {
+    font-style : italic;
+}
+
+label {
+    display: flex;
+    margin: 5px;
+}
+input{
+    font-size: 17px;
+    font-weight: normal;
+    background: none;
+    border: none;
+}
+input:hover {
+    background-color: #e7e7e7;
+}
+
+.empty {
+      font-style : italic;
+}
