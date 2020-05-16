@@ -1,0 +1,48 @@
+.conetnt{
+    display: flex;
+}
+.none{
+    display: none;
+}
+.block{
+    height: 100px;
+
+}
+.book_list{
+    width: 41%;
+}
+.preview{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.preview h2{
+    margin-bottom: 0px;
+}
+.preview span {
+    font-style: italic;
+}
+.preview img{
+    margin-top: 20px;
+}
+.preview p{
+    width: 500px;
+}
+.books{
+    list-style-type: none;
+    font-size: 19px;
+    padding: 0;
+}
+.books li button {
+    margin-left: 20px;
+}
+.add_book{
+    display: flex;
+    flex-direction: column;
+}
+.add_book lable{ 
+    display: contents;
+}
+.preview img{
+    width: 300px;
+}
